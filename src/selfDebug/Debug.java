@@ -17,4 +17,10 @@ public class Debug {
     //    drawCount = 0;
     //    timer = 0;
 
+
+    // For making a rectangle
+
+    //g2.setColor(Color.decode("#ffffff"));
+    //g2.fillRect(x, y, gp.tileSize, gp.tileSize);
+
 }
