@@ -24,6 +24,8 @@ public class Player extends Entity {
 
     public void setDefaultValues() {
 
+
+        //The players default position
         x = 100;
         y = 100;
         speed = 4;
@@ -133,5 +135,6 @@ public class Player extends Entity {
         }
         g2.drawImage(image, x, y, gp.tileSize, gp.tileSize, null);
     }
+
 
 }
