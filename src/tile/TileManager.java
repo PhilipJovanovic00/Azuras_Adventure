@@ -92,6 +92,10 @@ public class TileManager {
 
 
 
+    /*
+    //If something breaks use this code to draw the map.
+    //The Player will however not be in the middle of the map.
+
     public void draw(Graphics2D g2){
 
         for(int col = 0; col < gp.maxWorldCol; col++){
@@ -120,7 +124,9 @@ public class TileManager {
             }
         }
     }
-    /*
+
+     */
+
     public void draw(Graphics2D g2){
 
         int worldCol = 0;
@@ -133,8 +139,8 @@ public class TileManager {
 
             int worldX = worldCol * gp.tileSize;
             int worldY = worldRow * gp.tileSize;
-            int screenX = gp.player.worldX + gp.player.screenX;
-            int screenY = gp.player.worldY + gp.player.screenY;
+            int screenX = worldX - gp.player.worldX + gp.player.screenX;
+            int screenY = worldY - gp.player.worldY + gp.player.screenY;
 
             g2.drawImage(tile[tileNum].image, screenX, screenY, gp.tileSize, gp.tileSize, null);
             worldCol++;
@@ -145,10 +151,6 @@ public class TileManager {
             }
         }
     }
-
-     */
-
-
 }
 
 
