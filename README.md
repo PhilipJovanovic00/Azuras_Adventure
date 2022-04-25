@@ -1,4 +1,8 @@
 # Azuras_Adventure
-This is a little 2D RPG game I am creating with Java. It is my first 2D Game, so i am not really good at it. 
-For now the Game can Move a player Sprite and draws a canvas.
-The Map will be expanded in the Future and more functions will be added.
+This is a little 2D RPG game I am creating with Java. It is my first 2D Game, so i am not really good at it. Nonetheless i wanted
+to challenge myself and try to make something as complex as a Game in Java, because i always liked the idea of creating
+a game by myself.
+
+V1.1: You are able to move the Player across the world.
+V1.2: There is Collision detection, so you cannot go where you are not supposed to.
+V1.3: Objects have been added, you can now see Objects. You will later be able to interact with them.
