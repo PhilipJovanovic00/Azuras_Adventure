@@ -16,7 +16,7 @@ public class Player extends Entity {
     public final int screenX;
     public final int screenY;
 
-    public Player(GamePanel gp, KeyHandler keyH){
+    public Player(GamePanel gp, KeyHandler keyH) {
 
         this.gp = gp;
         this.keyH = keyH;
@@ -47,31 +47,31 @@ public class Player extends Entity {
 
     }
 
-        //Gets all resources for the player
-        public void getPlayerImage(){
+    //Gets all resources for the player
+    public void getPlayerImage() {
 
-            try {
-                up1 = ImageIO.read(getClass().getResourceAsStream("/player/boy_up_1.png"));
-                up2 = ImageIO.read(getClass().getResourceAsStream("/player/boy_up_2.png"));
-                down1 = ImageIO.read(getClass().getResourceAsStream("/player/boy_down_1.png"));
-                down2 = ImageIO.read(getClass().getResourceAsStream("/player/boy_down_2.png"));
-                left1 = ImageIO.read(getClass().getResourceAsStream("/player/boy_left_1.png"));
-                left2 = ImageIO.read(getClass().getResourceAsStream("/player/boy_left_2.png"));
-                right1 = ImageIO.read(getClass().getResourceAsStream("/player/boy_right_1.png"));
-                right2 = ImageIO.read(getClass().getResourceAsStream("/player/boy_right_2.png"));
+        try {
+            up1 = ImageIO.read(getClass().getResourceAsStream("/player/boy_up_1.png"));
+            up2 = ImageIO.read(getClass().getResourceAsStream("/player/boy_up_2.png"));
+            down1 = ImageIO.read(getClass().getResourceAsStream("/player/boy_down_1.png"));
+            down2 = ImageIO.read(getClass().getResourceAsStream("/player/boy_down_2.png"));
+            left1 = ImageIO.read(getClass().getResourceAsStream("/player/boy_left_1.png"));
+            left2 = ImageIO.read(getClass().getResourceAsStream("/player/boy_left_2.png"));
+            right1 = ImageIO.read(getClass().getResourceAsStream("/player/boy_right_1.png"));
+            right2 = ImageIO.read(getClass().getResourceAsStream("/player/boy_right_2.png"));
 
-            }catch(IOException e){
-                e.printStackTrace();
-
-            }
+        } catch (IOException e) {
+            e.printStackTrace();
 
         }
 
+    }
 
-        //Update Method for KeyInput of the User, the Collision is also checked in here.
-    public void update(){
 
-        if(keyH.upPressed == true || keyH.downPressed == true || keyH.leftPressed == true || keyH.rightPressed == true) {
+    //Update Method for KeyInput of the User, the Collision is also checked in here.
+    public void update() {
+
+        if (keyH.upPressed == true || keyH.downPressed == true || keyH.leftPressed == true || keyH.rightPressed == true) {
 
 
             if (keyH.upPressed == true) {
@@ -95,9 +95,9 @@ public class Player extends Entity {
             collisionOn = false;
             gp.cChecker.checkTile(this);
 
-            if(collisionOn == false){
+            if (collisionOn == false) {
 
-                switch(direction){
+                switch (direction) {
                     case "up":
                         worldY -= speed;
                         break;
@@ -118,8 +118,7 @@ public class Player extends Entity {
             if (spriteCounter > 12) {
                 if (spriteNum == 1) {
                     spriteNum = 2;
-                }
-                else if (spriteNum == 2) {
+                } else if (spriteNum == 2) {
                     spriteNum = 1;
                 }
                 spriteCounter = 0;
@@ -128,47 +127,46 @@ public class Player extends Entity {
         }
 
 
-
-
     }
+
     //Draws the player on the screen
     //Changes the image depending on the direction and the images for the same direction
     //The image is also changed depending on the spriteCounter
     //This is for a better animation, so the player doesn't look like he is floating over the map
-    public void draw(Graphics2D g2){
+    public void draw(Graphics2D g2) {
 
         BufferedImage image = null;
 
-        switch(direction){
-            case"up":
-                if(spriteNum == 1) {
+        switch (direction) {
+            case "up":
+                if (spriteNum == 1) {
                     image = up1;
                 }
-                if(spriteNum == 2){
+                if (spriteNum == 2) {
                     image = up2;
                 }
                 break;
-            case"down":
-                if(spriteNum == 1){
+            case "down":
+                if (spriteNum == 1) {
                     image = down1;
                 }
-                if(spriteNum == 2){
+                if (spriteNum == 2) {
                     image = down2;
                 }
                 break;
-            case"left":
-                if(spriteNum == 1){
+            case "left":
+                if (spriteNum == 1) {
                     image = left1;
                 }
-                if(spriteNum == 2){
+                if (spriteNum == 2) {
                     image = left2;
                 }
                 break;
-            case"right":
-                if(spriteNum == 1){
+            case "right":
+                if (spriteNum == 1) {
                     image = right1;
                 }
-                if(spriteNum == 2){
+                if (spriteNum == 2) {
                     image = right2;
                 }
                 break;

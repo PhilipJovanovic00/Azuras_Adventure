@@ -10,6 +10,11 @@ public class CollisionChecker {
         this.gp = gp;
     }
 
+    /**
+     * Checks if the player is colliding with a Tile of the map
+     *
+     * @param entity
+     */
     public void checkTile(Entity entity) {
         int entityLeftWorldX = entity.worldX + entity.solidArea.x;
         int entityRightWorldX = entity.worldX + entity.solidArea.x + entity.solidArea.width;
@@ -59,6 +64,13 @@ public class CollisionChecker {
         }
     }
 
+    /**
+     * Checks if the player is colliding with the Object
+     *
+     * @param entity
+     * @param player
+     * @return
+     */
     public int checkObject(Entity entity, boolean player) {
 
         int index = 999;
@@ -73,7 +85,7 @@ public class CollisionChecker {
                 gp.obj[i].solidArea.x = gp.obj[i].worldX + gp.obj[i].solidArea.x;
                 gp.obj[i].solidArea.y = gp.obj[i].worldY + gp.obj[i].solidArea.y;
 
-                switch(entity.direction){
+                switch (entity.direction) {
                     case "up":
                         entity.solidArea.y -= entity.speed;
                     case "down":
