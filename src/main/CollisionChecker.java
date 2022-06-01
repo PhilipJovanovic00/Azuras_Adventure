@@ -59,4 +59,36 @@ public class CollisionChecker {
         }
     }
 
+    public int checkObject(Entity entity, boolean player) {
+
+        int index = 999;
+
+        for (int i = 0; i < gp.obj.length; i++) {
+            if (gp.obj[i] != null) {
+                //Get the entity's solid area position
+                entity.solidArea.x = entity.worldX + entity.solidArea.x;
+                entity.solidArea.y = entity.worldY + entity.solidArea.y;
+
+                //Get the object's solid area position
+                gp.obj[i].solidArea.x = gp.obj[i].worldX + gp.obj[i].solidArea.x;
+                gp.obj[i].solidArea.y = gp.obj[i].worldY + gp.obj[i].solidArea.y;
+
+                switch(entity.direction){
+                    case "up":
+                        entity.solidArea.y -= entity.speed;
+                    case "down":
+                        entity.solidArea.y += entity.speed;
+                    case "left":
+                        entity.solidArea.x -= entity.speed;
+                    case "right":
+                        entity.solidArea.x += entity.speed;
+                }
+            }
+        }
+
+        return index;
+
+
+    }
+
 }
