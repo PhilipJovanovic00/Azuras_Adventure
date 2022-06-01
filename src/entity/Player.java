@@ -45,6 +45,7 @@ public class Player extends Entity {
 
     }
 
+        //Gets all resources for the player
         public void getPlayerImage(){
 
             try {
@@ -65,6 +66,7 @@ public class Player extends Entity {
         }
 
 
+        //Update Method for KeyInput of the User, the Collision is also checked in here.
     public void update(){
 
         if(keyH.upPressed == true || keyH.downPressed == true || keyH.leftPressed == true || keyH.rightPressed == true) {
@@ -127,6 +129,10 @@ public class Player extends Entity {
 
 
     }
+    //Draws the player on the screen
+    //Changes the image depending on the direction and the images for the same direction
+    //The image is also changed depending on the spriteCounter
+    //This is for a better animation, so the player doesn't look like he is floating over the map
     public void draw(Graphics2D g2){
 
         BufferedImage image = null;
