@@ -51,14 +51,14 @@ public class Player extends Entity {
     public void getPlayerImage() {
 
         try {
-            up1 = ImageIO.read(getClass().getResourceAsStream("/player/boy_up_1.png"));
-            up2 = ImageIO.read(getClass().getResourceAsStream("/player/boy_up_2.png"));
-            down1 = ImageIO.read(getClass().getResourceAsStream("/player/boy_down_1.png"));
-            down2 = ImageIO.read(getClass().getResourceAsStream("/player/boy_down_2.png"));
-            left1 = ImageIO.read(getClass().getResourceAsStream("/player/boy_left_1.png"));
-            left2 = ImageIO.read(getClass().getResourceAsStream("/player/boy_left_2.png"));
-            right1 = ImageIO.read(getClass().getResourceAsStream("/player/boy_right_1.png"));
-            right2 = ImageIO.read(getClass().getResourceAsStream("/player/boy_right_2.png"));
+            up1 = ImageIO.read(getClass().getResourceAsStream("/player/Azura_Up_1.png"));
+            up2 = ImageIO.read(getClass().getResourceAsStream("/player/Azura_Up_2.png"));
+            down1 = ImageIO.read(getClass().getResourceAsStream("/player/Azura_Down_1.png"));
+            down2 = ImageIO.read(getClass().getResourceAsStream("/player/Azura_Down_2.png"));
+            left1 = ImageIO.read(getClass().getResourceAsStream("/player/Azura_Left_1.png"));
+            left2 = ImageIO.read(getClass().getResourceAsStream("/player/Azura_Left_2.png"));
+            right1 = ImageIO.read(getClass().getResourceAsStream("/player/Azura_Right_1.png"));
+            right2 = ImageIO.read(getClass().getResourceAsStream("/player/Azura_Right_2.png"));
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -140,18 +140,18 @@ public class Player extends Entity {
         switch (direction) {
             case "up":
                 if (spriteNum == 1) {
-                    image = up1;
-                }
-                if (spriteNum == 2) {
-                    image = up2;
-                }
-                break;
-            case "down":
-                if (spriteNum == 1) {
                     image = down1;
                 }
                 if (spriteNum == 2) {
                     image = down2;
+                }
+                break;
+            case "down":
+                if (spriteNum == 1) {
+                    image = up1;
+                }
+                if (spriteNum == 2) {
+                    image = up2;
                 }
                 break;
             case "left":
