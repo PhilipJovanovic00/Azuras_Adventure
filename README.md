@@ -5,4 +5,6 @@ a game by myself.
 
 V1.1: You are able to move the Player across the world.
 V1.2: There is Collision detection, so you cannot go where you are not supposed to.
-V1.3: Objects have been added, you can now see Objects. You will later be able to interact with them.
+V1.3: Objects have been added, you can now see Objects.
+V1.4: You Can now interact with Objects and pick them up, as well as open doors with keys.
+V1.5: Sounds have been added, when interacting with Objects. Music has been added aswell.
