@@ -167,10 +167,13 @@ public class Player extends Entity {
                     gp.stopMusic();
                     gp.playSE(4);
                     break;
+                    /*
                 case "Boots":
                     speed += 2;
                     gp.obj[i] = null;
                     break;
+
+                     */
             }
 
         }
