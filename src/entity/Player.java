@@ -152,6 +152,10 @@ public class Player extends Entity {
                     }
                     System.out.println("Key: " + hasKey);
                     break;
+                case "Boots":
+                    speed += 2;
+                    gp.obj[i] = null;
+                    break;
             }
 
         }
@@ -168,18 +172,18 @@ public class Player extends Entity {
         switch (direction) {
             case "up":
                 if (spriteNum == 1) {
-                    image = down1;
-                }
-                if (spriteNum == 2) {
-                    image = down2;
-                }
-                break;
-            case "down":
-                if (spriteNum == 1) {
                     image = up1;
                 }
                 if (spriteNum == 2) {
                     image = up2;
+                }
+                break;
+            case "down":
+                if (spriteNum == 1) {
+                    image = down1;
+                }
+                if (spriteNum == 2) {
+                    image = down2;
                 }
                 break;
             case "left":
